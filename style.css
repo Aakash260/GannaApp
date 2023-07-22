@@ -19,6 +19,8 @@ header {
   height: 95%;
   display: flex;
   flex-wrap: wrap;
+ position: relative;
+ overflow: hidden;
   >.master_play{
     display: flex;
     align-items: center;
@@ -143,7 +145,7 @@ header .menu_side,
   box-shadow: 5px 0px 2px #090f1f;
   color: white;
 }
-
+ 
 header .song_side {
   width: 75%;
   background: #0b1320;
@@ -288,10 +290,125 @@ header .menu_side .playlist {
   }
 }
 
-.vol{
-  display: flex;
+ .vol{
+  position: relative;
+right:-10px;
+  >.vol_bar{
+    position: absolute;
+    height: 2px;
+    right: 2px;
+    width: 86%;
+    top:6px;
+    background-color: #4c5262;
+  }
+  >.acontrol{
+    opacity: 0;
+  }
+ }
+ 
+ .vol .dot::before{
   position: absolute;
- right: 2%;
+  content: '';
+  height: 2px;
+  right: 70px;
+  width: 40%;
+  top:6px;
+  background-color:#36e2ec;
+ }
+
+ .vol .dot::after{
+  content: '';
+  position: absolute;
+   width: 0;
+   height:0;
+   border:7px solid #36e2ec;
+   top:3px;
+    border-color: transparent;
+   border-bottom-color: #36e2ec;
+   left:49%;
+    
+  border-radius:50%;
   
 }
+
+ header .song_side::before{
+  content: '';
+position: absolute;
+width: 100%;
+height: 300px;
+background:url('/bg.png');
+
+ }
+
+ nav{
+
+  position: absolute;
+ left: 30%;
+ top:5%;
+ >ul{
+ display: flex;
+ list-style: none;
+ gap:2vw;
+ color: #4c5262;
  
+
+ }
+ >ul li:hover{
+  color:white;
+ transform: scale(1.1) ;
+  transition: .3s linear;
+  cursor: pointer;
+ }
+ >ul li:nth-child(1){
+  color: #fff;
+
+ }
+ }
+ 
+ .row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+ }
+
+ .search{
+  /* position: relative;
+ top:50px;
+ left: 0; */
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ width:40px;
+ padding: 5px 10px;
+ border-radius: 20px;
+ color: gray;
+ z-index: 1;
+ position: absolute;
+ right: -250px;
+ background: rgb(184,184,184,.1);
+ border-radius: 20px;
+ backdrop-filter: blur(5px);
+ width: 85%;
+ }
+
+ 
+
+ .search input{
+  background: none;
+  border: none;
+ outline: none;
+ padding: 0px 10px;
+  color: white;
+  font-size: 12px;
+
+ }
+
+ .user img{
+  position: absolute;
+  width:20%;
+ 
+ margin-left: 242%;
+ border-radius: 50%;
+  z-index: 5;
+ }
