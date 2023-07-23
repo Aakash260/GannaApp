@@ -331,6 +331,9 @@ right:-10px;
   
 }
 
+header .song_side{
+  padding-left: 32px;
+}
  header .song_side::before{
   content: '';
 position: absolute;
@@ -411,4 +414,136 @@ background:url('/bg.png');
  margin-left: 242%;
  border-radius: 50%;
   z-index: 5;
+  border:4px solid black
  }
+ .content{
+  position: absolute;
+  top:100px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  justify-content: center;
+
+  >.button_container{
+    display: flex;
+    gap:20px;
+
+  }
+ }
+
+ 
+
+ .bt,.bt2{
+  padding: 10px;
+  border-radius: 5px;
+  border:2px solid #36e2ec;
+  color: white;
+  cursor: pointer;
+  background-color: transparent;
+  box-shadow: inset 0 0 10px gray;
+ }
+
+ .popular_song{
+  position: absolute;
+   display: flex;
+ top:300px;
+ width: 70%;
+ justify-content: space-between;
+ padding: 0 5px;
+ }
+
+ .arrows> i{
+  cursor: pointer;
+ padding: 0 2px;
+  transition: .2s linear;
+  color: gray;
+ 
+ }
+
+ .arrows>i:hover{
+  color: #fff;
+}
+.popular_song .pop_song {
+  content: '';
+ 
+  width: 100%;
+  flex-wrap: initial;
+  height: 145px;
+  position: absolute;
+  top: 58px;
+ display: flex;
+  >li{
+    list-style: none;
+    >img{
+      position: absolute;   
+      height: 70%; 
+ 
+    }
+    >h5{
+      position: absolute;
+      bottom: 0;
+    }
+     >i {
+      position: relative;
+      bottom: -43px;
+      left: 34px;
+     display: none;
+
+  }
+ 
+  } 
+}
+ .pop_song .songItem:not(:nth-child(1)){
+  margin-left: 115px;
+  
+ }
+
+ .pop_song{
+  overflow: hidden;
+  overflow-x: scroll;
+ 
+ }
+ .pop_song::-webkit-scrollbar{
+  display: none;
+}
+.content p{
+  color: gray;
+}
+
+.songItem div{
+  color: gray;
+}
+.artist img{
+  position: absolute;
+  width: 60px;
+  bottom: 90px;
+  border-radius: 50%;
+}
+ 
+.artist_list .artist:not(:nth-child(1)){
+  margin-left: 95px;
+ }
+
+ .artist_title h4{
+  
+    color: white;
+    position: absolute;
+    bottom: 150px;
+ }
+
+  .pop_song .songItem::after{
+  content: '';
+  color: white;
+  border:15px solid red;
+  border-color: transparent;
+  border-left-color: white;
+ position: absolute;
+ bottom:70px;
+ margin-left: 36px;
+ display: none;
+ }
+ .songItem:hover::after{
+  display: block;
+ }
+ 
