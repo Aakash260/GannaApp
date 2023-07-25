@@ -12,7 +12,7 @@
 
 <body>
     <header>
-        <div class="menu_side">
+        <div class="menu_side drag-list">
             <h1>PlayList</h1>
             <div class="playlist">
                 <h4 class="active"><span></span><i class="bi fa-solid fa-music"></i> Playlist</h4>
@@ -20,68 +20,75 @@
                 <h4><span></span><i class="bi fa-solid fa-music"></i> Recommanded</h4>
             </div>
             <div class="menu_song">
-                <li class="songItem"><span>01</span>
+                <li class="songItem" draggable="true"><span>01</span>
                     <img src="img/1.jpg" alt="">
                     <h5>On My Way <br>
                         <div class="subtitle">Alan Walker</div>
                     </h5>
                     <i id="1" class="bi playListPlay fas fa-play"></i>
                 </li>
-                <li class="songItem"><span>01</span>
+                <li class="songItem" draggable="true"><span>02</span>
                     <img src="img/1.jpg" alt="">
                     <h5>On My Way <br>
                         <div class="subtitle">Alan Walker</div>
                     </h5>
-                    <i id="1" class="bi playListPlay fas fa-play"></i>
+                    <i id="2" class="bi playListPlay fas fa-play"></i>
                 </li>
-                <li class="songItem"><span>01</span>
+                <li class="songItem"draggable="true"><span>03</span>
                     <img src="img/1.jpg" alt="">
                     <h5>On My Way <br>
                         <div class="subtitle">Alan Walker</div>
                     </h5>
-                    <i id="1" class="bi playListPlay fas fa-play"></i>
+                    <i id="3" class="bi playListPlay fas fa-play"></i>
                 </li>
-                <li class="songItem"><span>01</span>
+                <li class="songItem"draggable="true"><span>04</span>
                     <img src="img/1.jpg" alt="">
                     <h5>On My Way <br>
                         <div class="subtitle">Alan Walker</div>
                     </h5>
-                    <i id="1" class="bi playListPlay fas fa-play"></i>
+                    <i id="4" class="bi playListPlay fas fa-play"></i>
                 </li>
-                <li class="songItem"><span>01</span>
+                <li class="songItem"draggable="true"><span>05</span>
                     <img src="img/1.jpg" alt="">
                     <h5>On My Way <br>
                         <div class="subtitle">Alan Walker</div>
                     </h5>
-                    <i id="1" class="bi playListPlay fas fa-play"></i>
+                    <i id="5" class="bi playListPlay fas fa-play"></i>
                 </li>
-                <li class="songItem"><span>01</span>
+                <li class="songItem"draggable="true"><span>06</span>
                     <img src="img/1.jpg" alt="">
                     <h5>On My Way <br>
                         <div class="subtitle">Alan Walker</div>
                     </h5>
-                    <i id="1" class="bi playListPlay fas fa-play"></i>
+                    <i id="6" class="bi playListPlay fas fa-play"></i>
                 </li>
-                <li class="songItem"><span>01</span>
+                <li class="songItem"draggable="true"><span>07</span>
                     <img src="img/1.jpg" alt="">
                     <h5>On My Way <br>
                         <div class="subtitle">Alan Walker</div>
                     </h5>
-                    <i id="1" class="bi playListPlay fas fa-play"></i>
+                    <i id="7" class="bi playListPlay fas fa-play"></i>
                 </li>
-                <li class="songItem"><span>01</span>
+                <li class="songItem"draggable="true"><span>08</span>
                     <img src="img/1.jpg" alt="">
                     <h5>On My Way <br>
                         <div class="subtitle">Alan Walker</div>
                     </h5>
-                    <i id="1" class="bi playListPlay fas fa-play"></i>
+                    <i id="8" class="bi playListPlay fas fa-play"></i>
                 </li>
-                <li class="songItem"><span>01</span>
+                <li class="songItem"draggable="true"><span>09</span>
                     <img src="img/1.jpg" alt="">
                     <h5>On My Way <br>
                         <div class="subtitle">Alan Walker</div>
                     </h5>
-                    <i id="1" class="bi playListPlay fas fa-play"></i>
+                    <i id="9" class="bi playListPlay fas fa-play"></i>
+                </li>
+                <li class="songItem"draggable="true"><span>10</span>
+                    <img src="img/1.jpg" alt="">
+                    <h5>On My Way <br>
+                        <div class="subtitle">Alan Walker</div>
+                    </h5>
+                    <i id="10" class="bi playListPlay fas fa-play"></i>
                 </li>
             </div>
         </div>
@@ -95,6 +102,17 @@
                 <div class="search">
                     <i class="fa-solid fa-magnifying-glass fa-xl"></i>
                     <input type="text" placeholder="search music...">
+             <div class="search_result">
+                <!-- <li class="songItem card"draggable="true"> 
+                    <img src="img/1.jpg" alt="">
+                    <h5>On My Way <br>
+                        <div class="subtitle">Alan Walker</div>
+                    </h5>
+                    <i id="10" class="bi playListPlay fas fa-play"></i>
+                </li> -->
+               
+ 
+             </div>
                 </div>
                 <div class="user">
                     <img src="/img/akhil.jpg" alt="" srcset="">
@@ -119,69 +137,69 @@
                     <i class="fas fa-arrow-left" id="pop_song_left"></i>
                     <i class="fas fa-arrow-right" id="pop_song_right"></i>
                 </div>
-                <div class="pop_song">
-                    <li class="songItem"> 
+                <div class="pop_song"id="pop_song">
+                    <li class="songIt"> 
                         <img src="img/1.jpg" alt="">
                         <h5>On My Way <br>
                             <div class="subtitle">Alan Walker</div>
                         </h5>
-                        <i class="bi playListPlay fas fa-play"></i>
+                        <i class="bi playPlay fas fa-play" ></i>
                     </li>
-                    <li class="songItem"> 
-                        <img src="img/1.jpg" alt="">
+                    <li class="songIt"> 
+                        <img src="img/2.jpg" alt="">
                         <h5>On My Way <br>
                             <div class="subtitle">Alan Walker</div>
                         </h5>
-                        <i class="bi playListPlay fas fa-play"></i>
+                        <i class="bi playPlay fas fa-play"></i>
                     </li>
-                    <li class="songItem"> 
-                        <img src="img/1.jpg" alt="">
+                    <li class="songIt"> 
+                        <img src="img/3.jpg" alt="">
                         <h5>On My Way <br>
                             <div class="subtitle">Alan Walker</div>
                         </h5>
-                        <i class="bi playListPlay fas fa-play"></i>
+                        <i class="bi playPlay fas fa-play"></i>
                     </li>
-                    <li class="songItem"> 
-                        <img src="img/1.jpg" alt="">
+                    <li class="songIt"> 
+                        <img src="img/4.jpg" alt="">
                         <h5>On My Way <br>
                             <div class="subtitle">Alan Walker</div>
                         </h5>
-                        <i class="bi playListPlay fas fa-play"></i>
+                        <i class="bi playPlay fas fa-play"></i>
                     </li>
-                    <li class="songItem"> 
-                        <img src="img/1.jpg" alt="">
+                    <li class="songIt"> 
+                        <img src="img/5.jpg" alt="">
                         <h5>On My Way <br>
                             <div class="subtitle">Alan Walker</div>
                         </h5>
-                        <i class="bi playListPlay fas fa-play"></i>
+                        <i class="bi playPlay fas fa-play"></i>
                     </li>
-                    <li class="songItem"> 
-                        <img src="img/1.jpg" alt="">
+                    <li class="songIt"> 
+                        <img src="img/6.jpg" alt="">
                         <h5>On My Way <br>
                             <div class="subtitle">Alan Walker</div>
                         </h5>
-                        <i class="bi playListPlay fas fa-play"></i>
+                        <i class="bi playPlay fas fa-play"></i>
                     </li>
-                    <li class="songItem"> 
-                        <img src="img/1.jpg" alt="">
+                    <li class="songIt"> 
+                        <img src="img/7.jpg" alt="">
                         <h5>On My Way <br>
                             <div class="subtitle">Alan Walker</div>
                         </h5>
-                        <i class="bi playListPlay fas fa-play"></i>
+                        <i class="bi playPlay fas fa-play"></i>
                     </li>
-                    <li class="songItem"> 
-                        <img src="img/1.jpg" alt="">
+                    <li class="songIt"> 
+                        <img src="img/8.jpg" alt="">
                         <h5>On My Way <br>
                             <div class="subtitle">Alan Walker</div>
                         </h5>
-                        <i class="bi playListPlay fas fa-play"></i>
+                        <i class="bi playPlay fas fa-play"></i>
                     </li>
-                    <li class="songItem"> 
-                        <img src="img/1.jpg" alt="">
+                    <li class="songIt"> 
+                        <img src="img/9.jpg" alt="">
                         <h5>On My Way <br>
                             <div class="subtitle">Alan Walker</div>
                         </h5>
-                        <i class="bi playListPlay fas fa-play"></i>
+                        <i class="bi playPlay fas fa-play"></i>
                     </li>
                      
                 </div>
@@ -200,7 +218,7 @@
                        <h4>Arjit Singh</h4>
                     </li>
                     <li class="artist"> 
-                        <img src="/img/arjit.jpg" alt="">
+                        <img src="/img/jubin Nautiyal.jpg" alt="">
                         <h4>Arjit Singh</h4>
                     </li>
                  
@@ -208,37 +226,39 @@
             </div>
         </div>
         <div class="master_play">
-            <div class="wave">
+            <div class="wave" id="wave">
                 <div class="wave1"></div>
                 <div class="wave1"></div>
                 <div class="wave1"></div>
             </div>
             <img src="img/14.jpg" alt="" id="poster_master_play">
-            <div class="titlecontent">
+            <div class="titlecontent" id="titlecontent">
                 <h5 id="title">Vaste</h5>
                 <div class="subtitle">Kanchan</div>
             </div>
             <div class="icon">
                 <i class=" bi shuffle fa-solid fa-music">next</i>
                 <i class=" bi fa-solid fa-forward-step fa-rotate-180"></i>
-                <i class=" bi fa-solid fa-play"></i>
-                <i class=" bi fa-solid fa-forward-step"></i>
-                <i id="download_music" class=" bi fa-solid fa-download"></i>
-            </div>
+                <i class=" bi fa-solid fa-play"id="master_play"></i>
+                <i class=" bi fa-solid fa-forward-step" id="right"></i>
+                <a id="download_music" href="" download><i  class=" bi fa-solid fa-download"></i></a>
+            </div> 
             <span id="currentStart">
                 0:00
             </span>
             <div class="bar">
                 <input type="range" id="seek" min="0" max="100">
                 <div class="bar2" id="bar2"></div>
-                <div class="dot"></div>
+                <div class="dot"id="dot"></div>
             </div>
             <span id="currentEnd">0:30</span>
             <div class="vol">
                 <i class="fa-solid fa-volume-low" id="vol_icon" style="color: #fff;"></i>
                 <input class="acontrol" type="range" name="" id="vol" min="0" max="100">
                 <div class="vol_bar"></div>
-                <div class="dot" id="vol_dot"></div>
+                <div class="dot" id="vol_dot">
+                    
+                </div>
             </div>
         </div>
         </div>
@@ -246,3 +266,4 @@
 </body>
 
 </html>
+
