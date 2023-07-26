@@ -7,7 +7,7 @@
 :root{
   --dark-theme: black;
   --outerbody-theme:#121213;
-  
+  --primary:black;
   
 }
 body {
@@ -143,7 +143,7 @@ z-index: 9999;
 
 header .menu_side,
 .song_side {
-  width: 25%;
+ 
   height: 90%;
   background: var(--dark-theme);
   box-shadow: 5px 0px 2px #090f1f;
@@ -153,9 +153,10 @@ header .menu_side,
 header .song_side {
   width: 75%;
   background: var(--dark-theme);
+ 
 }
 header .master_play {
-  width: 100%;
+  width: 91.5%;
   height: 10%;
   background: #111727;
   box-shadow: 0px 3px 8px #090f1f;
@@ -330,7 +331,7 @@ header .song_side{
  header .song_side::before{
   content: '';
 position: absolute;
-width: 100%;
+width: 72%;
 height: 300px;
 background:url('img/EdUz79.webp');
  
@@ -594,3 +595,4 @@ align-items: center;
 .display{
   display: block;
 }
+
