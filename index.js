@@ -6,64 +6,123 @@ const music =new Audio('audio/1.mp3')
         id:1,
         songName:`On My Way <br>
         <div class="subtitle">Alan Walker</div>`,
-        poster:'img/1.jpg'
+        poster:`img/1.jpg`
     },
     {
         id:2,
         songName:`Were are you now <br>
         <div class="subtitle">Rana leon</div>`,
-        poster:'img/2.jpg'
+        poster:`img/2.jpg`
     },
     {
         id:3,
         songName:`Hold me Close<br>
         <div class="subtitle">Luis Raty</div>`,
-        poster:'img/3.jpg'
+        poster:`img/3.jpg`
     },
     {
         id:4,
         songName:`Like a ocean<br>
         <div class="subtitle">Janny khas</div>`,
-        poster:'img/4.jpg'
+        poster:`img/4.jpg`
     },
     {
         id:5,
         songName:`Agar tum saath ho<br>
         <div class="subtitle">Alka yagnik</div>`,
-        poster:'img/5.jpg'
+        poster:`img/5.jpg`
     },
     {
         id:6,
         songName:`Leja zarror ho to<br>
         <div class="subtitle">Jutin </div>`,
-        poster:'img/6.jpg'
+        poster:`img/6.jpg`
     },
     {
         id:7,
         songName:`Dilbar<br>
         <div class="subtitle">Neha</div>`,
-        poster:'img/7.jpg'
+        poster:`img/7.jpg`
     },
     {
         id:8,
         songName:`Bulave tuje yaare<br>
         <div class="subtitle">Akhil </div>`,
-        poster:'img/8.jpg'
+        poster:`img/8.jpg`
     },
     {
         id:9,
         songName:`Bulave tuje yaare<br>
         <div class="subtitle">Akhil </div>`,
-        poster:'img/9.jpg'
+        poster:`img/9.jpg`
     },
     {
         id:10,
         songName:`Lagdi lahoor di ha<br>
         <div class="subtitle"Guru Randawa</div>`,
-        poster:'img/10.jpg'
+        poster:`img/10.jpg`
     }
     
  ]
+
+const search_result =document.getElementsByClassName('search_result')[0]
+let search1 =document.getElementsByClassName('search')[0]
+//  songs.forEach(element => {
+    
+//     const {id,songName,poster}=element;
+//        const list=`<li class="songItem card"draggable="true">
+//  	    <img src=${poster} alt="">
+//  	   <h5> ${songName}</h5>
+//  	    <i id="${id}" class="bi playListPlay fas fa-play"></i>
+//  	</li>`
+   
+//      search_result.innerHTML+=list;  
+//  })
+
+ const menu_song =document.getElementsByClassName('menu_song')[0]
+ 
+ songs.forEach(element=>{
+     const {id,poster,songName}=element;
+     
+     const div1=` <li class="songItem" draggable="true"> 
+     <img src="${poster}" alt="">
+     ${songName}
+     <i id="${id}" class="bi playListPlay fas fa-play"></i>
+     </li>`
+     
+     menu_song.innerHTML+=div1;
+    })
+ 
+ 
+
+    const gettitle =document.getElementById('gettitle')
+    gettitle.addEventListener('keyup', function(event) {
+        const userInput = event.target.value;
+        const result= songs.filter((e) =>e.songName.includes(userInput))
+        
+        search_result.innerHTML=''
+       result.forEach(element => {
+    
+            const {id,songName,poster}=element;
+               const list=`<li class="songItem card"draggable="true">
+                 <img src=${poster} alt="">
+                  ${songName} 
+                 <i id="${id}" class="bi playListPlay fas fa-play"></i>
+             </li>`
+           
+             search_result.innerHTML+=list;  
+
+         })
+        
+      });
+
+
+
+ 
+search1.addEventListener('click',()=>{
+    search_result.classList.toggle('display')
+})
+ 
 let pop_song =document.getElementsByClassName('pop_song')[0];
 
  pop_right.addEventListener('click',()=>{
@@ -74,10 +133,10 @@ let pop_song =document.getElementsByClassName('pop_song')[0];
      pop_song.scrollLeft-=330;
      
  })
-Array.from(document.getElementsByClassName('songItem')).forEach((e,i)=>{
-e.getElementsByTagName('img')[0].src=songs[i].poster;
-e.getElementsByTagName('h5')[0].innerHTML=songs[i].songName;
-})
+// Array.from(document.getElementsByClassName('songItem')).forEach((e,i)=>{
+//  e.getElementsByTagName('img')[0].src=songs[i].poster;
+// e.getElementsByTagName('h5')[0].innerHTML=songs[i].songName;
+// })
  
 Array.from(document.getElementsByClassName('songIt')).forEach((e,i)=>{
 e.getElementsByTagName('img')[0].src=songs[i].poster;
@@ -208,7 +267,7 @@ farotate180.addEventListener('click',function(){
       const poster_master_play =document.getElementById('poster_master_play');
       poster_master_play.src=`img/${index}.jpg`
        const titlecontent =document.getElementById('titlecontent')
-       titlecontent.innerHTML= songs[index].songName
+       titlecontent.innerHTML= songs[index-1].songName
        music.play();
        master_play.classList.remove('fa-play')
        master_play.classList.add('fa-pause')
@@ -217,15 +276,14 @@ farotate180.addEventListener('click',function(){
 })
 right.addEventListener('click',function(){
     index+=1;
-    if(index===songs.length){
-  
+    if(index>=songs.length){
         index=1
     }
     music.src=`audio/${index}.mp3`;
       const poster_master_play =document.getElementById('poster_master_play');
       poster_master_play.src=`img/${index}.jpg`
        const titlecontent =document.getElementById('titlecontent')
-       titlecontent.innerHTML= songs[index].songName
+       titlecontent.innerHTML= songs[index-1].songName
        music.play();
        master_play.classList.remove('fa-play')
        master_play.classList.add('fa-pause')
@@ -260,4 +318,3 @@ right.addEventListener('click',function(){
 //             break;
 //     }
 // })
- 

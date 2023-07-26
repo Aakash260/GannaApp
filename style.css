@@ -7,7 +7,8 @@
 :root{
   --dark-theme: black;
   --outerbody-theme:#121213;
-  --primary:var(--primary);
+  
+  
 }
 body {
   width: 100%;
@@ -555,7 +556,8 @@ background:url('img/EdUz79.webp');
  
    
     width: 352px;
-    height: 176px;
+   min-height:60px;
+   height: 200px;
     position: absolute;
     top:22px;
     display: flex;
@@ -566,6 +568,9 @@ background:url('img/EdUz79.webp');
      background: rgb(184,184,184,.4);
      backdrop-filter: blur(3px);
      display: none;
+ overflow-x: hidden;
+ 
+      overflow-y: scroll;
  >.card{
  border-radius: 10px;
   width: 352px;
@@ -586,3 +591,6 @@ align-items: center;
  }
  }
 
+.display{
+  display: block;
+}

@@ -1,0 +1,18 @@
+@media (max-width:1200px) {
+    .popular_title h4{
+        margin-top: 20px;
+    }
+    .user{
+        display: contents;
+    }
+    .vol {
+        position: relative;
+        right: -10px;
+        bottom: -33px;
+        left: -52px;
+    }
+}
+
+@media (max-width:1024px) {
+    
+}

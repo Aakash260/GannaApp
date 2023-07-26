@@ -6,6 +6,8 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Suno</title>
     <link rel='stylesheet' href='style.css'>
+    <link rel='stylesheet' href='media.css'>
+    <link rel="icon" href="https://www.indiantelevision.com/sites/default/files/styles/smartcrop_800x800/public/images/tv-images/2018/12/11/gaana_0.jpg?itok=3j5Dt7ux" type="image/x-icon">
     <script defer src='https://kit.fontawesome.com/1f29a2fbc8.js' crossorigin='anonymous'></script>
     <script defer src='index.js'></script>
 </head>
@@ -13,83 +15,22 @@
 <body>
     <header>
         <div class="menu_side drag-list">
-            <h1>PlayList</h1>
+          
             <div class="playlist">
                 <h4 class="active"><span></span><i class="bi fa-solid fa-music"></i> Playlist</h4>
                 <h4><span></span><i class="bi fa-solid fa-music"></i> Last Listening</h4>
                 <h4><span></span><i class="bi fa-solid fa-music"></i> Recommanded</h4>
             </div>
+            <h1>PlayList</h1>
             <div class="menu_song">
-                <li class="songItem" draggable="true"><span>01</span>
+                <!-- <li class="songItem" draggable="true"><span>01</span>
                     <img src="img/1.jpg" alt="">
                     <h5>On My Way <br>
                         <div class="subtitle">Alan Walker</div>
                     </h5>
                     <i id="1" class="bi playListPlay fas fa-play"></i>
-                </li>
-                <li class="songItem" draggable="true"><span>02</span>
-                    <img src="img/1.jpg" alt="">
-                    <h5>On My Way <br>
-                        <div class="subtitle">Alan Walker</div>
-                    </h5>
-                    <i id="2" class="bi playListPlay fas fa-play"></i>
-                </li>
-                <li class="songItem"draggable="true"><span>03</span>
-                    <img src="img/1.jpg" alt="">
-                    <h5>On My Way <br>
-                        <div class="subtitle">Alan Walker</div>
-                    </h5>
-                    <i id="3" class="bi playListPlay fas fa-play"></i>
-                </li>
-                <li class="songItem"draggable="true"><span>04</span>
-                    <img src="img/1.jpg" alt="">
-                    <h5>On My Way <br>
-                        <div class="subtitle">Alan Walker</div>
-                    </h5>
-                    <i id="4" class="bi playListPlay fas fa-play"></i>
-                </li>
-                <li class="songItem"draggable="true"><span>05</span>
-                    <img src="img/1.jpg" alt="">
-                    <h5>On My Way <br>
-                        <div class="subtitle">Alan Walker</div>
-                    </h5>
-                    <i id="5" class="bi playListPlay fas fa-play"></i>
-                </li>
-                <li class="songItem"draggable="true"><span>06</span>
-                    <img src="img/1.jpg" alt="">
-                    <h5>On My Way <br>
-                        <div class="subtitle">Alan Walker</div>
-                    </h5>
-                    <i id="6" class="bi playListPlay fas fa-play"></i>
-                </li>
-                <li class="songItem"draggable="true"><span>07</span>
-                    <img src="img/1.jpg" alt="">
-                    <h5>On My Way <br>
-                        <div class="subtitle">Alan Walker</div>
-                    </h5>
-                    <i id="7" class="bi playListPlay fas fa-play"></i>
-                </li>
-                <li class="songItem"draggable="true"><span>08</span>
-                    <img src="img/1.jpg" alt="">
-                    <h5>On My Way <br>
-                        <div class="subtitle">Alan Walker</div>
-                    </h5>
-                    <i id="8" class="bi playListPlay fas fa-play"></i>
-                </li>
-                <li class="songItem"draggable="true"><span>09</span>
-                    <img src="img/1.jpg" alt="">
-                    <h5>On My Way <br>
-                        <div class="subtitle">Alan Walker</div>
-                    </h5>
-                    <i id="9" class="bi playListPlay fas fa-play"></i>
-                </li>
-                <li class="songItem"draggable="true"><span>10</span>
-                    <img src="img/1.jpg" alt="">
-                    <h5>On My Way <br>
-                        <div class="subtitle">Alan Walker</div>
-                    </h5>
-                    <i id="10" class="bi playListPlay fas fa-play"></i>
-                </li>
+                </li> -->
+               
             </div>
         </div>
         <div class="song_side">
@@ -101,8 +42,8 @@
                 </ul>
                 <div class="search">
                     <i class="fa-solid fa-magnifying-glass fa-xl"></i>
-                    <input type="text" placeholder="search music...">
-             <div class="search_result">
+                    <input id="gettitle" type="text" placeholder="search music...">
+             <div class="search_result songItem">
                 <!-- <li class="songItem card"draggable="true"> 
                     <img src="img/1.jpg" alt="">
                     <h5>On My Way <br>
@@ -233,7 +174,7 @@
             </div>
             <img src="img/14.jpg" alt="" id="poster_master_play">
             <div class="titlecontent" id="titlecontent">
-                <h5 id="title">Vaste</h5>
+                <h5 id="title">Sorry</h5>
                 <div class="subtitle">Kanchan</div>
             </div>
             <div class="icon">
